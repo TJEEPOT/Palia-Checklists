@@ -1,4 +1,4 @@
-var tableHeaders = ["Name", "Rarity", "Appears", "Environment", "Bait", "Base Value",	"🌟 Value"];
+var tableHeaders = ["Name", "Rarity", "Appears", "Environment", "Bait", "Base Value", "🌟 Value"];
 var tableData = [{"Name":"Albino Eel","Rarity":"Common","Appears":"All Day","Environment":"Caves","Bait":"Worm","Base Value":"35 Gold","🌟 Value":"52 Gold"},
 {"Name":"Alligator Gar","Rarity":"Common","Appears":"All Day","Environment":"Kilima Lake","Bait":"Glow Worm","Base Value":"80 Gold","🌟 Value":"120 Gold"},
 {"Name":"Ancient Fish","Rarity":"Epic","Appears":"All Day","Environment":"Kilima Lake","Bait":"Glow Worm","Base Value":"410 Gold","🌟 Value":"615 Gold"},
@@ -80,3 +80,4 @@ var tableData = [{"Name":"Albino Eel","Rarity":"Common","Appears":"All Day","Env
 {"Name":"Willow Lamprey","Rarity":"Rare","Appears":"Night","Environment":"Bahari Rivers","Bait":"Worm","Base Value":"135 Gold","🌟 Value":"202 Gold"},
 {"Name":"Yellow Perch","Rarity":"Common","Appears":"All Day","Environment":"Bahari Rivers","Bait":"None","Base Value":"21 Gold","🌟 Value":"31 Gold"},
 {"Name":"Yellowfin Tuna","Rarity":"Common","Appears":"All Day","Environment":"Bahari Coast","Bait":"Glow Worm","Base Value":"85 Gold","🌟 Value":"127 Gold"}];
+export { tableHeaders, tableData };
