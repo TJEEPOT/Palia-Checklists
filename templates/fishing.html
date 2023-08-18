@@ -5,9 +5,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Fish Tracker</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script>var isLocal = false; // Change to false when deploying</script>
+  <script>var url = isLocal ? "" : "/Palia-Checklists"; document.write("<base href='" + url + "' />");</script>
   <link rel="stylesheet" type="text/css" media="screen" href="/static/main.css" />
-  <link rel="icon" href="/Palia-Checklists/static/favicon.ico" type="image/x-icon" />
-  <script type="module" src="/Palia-Checklists/static/dynamic-table.js"></script>
+  <link rel="icon" href="/static/favicon.ico" type="image/x-icon" />
+  <script type="module" src="/static/dynamic-table.js"></script>
 </head>
   
 <body>
