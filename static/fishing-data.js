@@ -80,4 +80,5 @@ var tableData = [{"Name":"Albino Eel","Rarity":"Common","Appears":"All Day","Env
 {"Name":"Willow Lamprey","Rarity":"Rare","Appears":"Night","Environment":"Bahari Rivers","Bait":"Worm","Base Value":"135 Gold","🌟 Value":"202 Gold"},
 {"Name":"Yellow Perch","Rarity":"Common","Appears":"All Day","Environment":"Bahari Rivers","Bait":"None","Base Value":"21 Gold","🌟 Value":"31 Gold"},
 {"Name":"Yellowfin Tuna","Rarity":"Common","Appears":"All Day","Environment":"Bahari Coast","Bait":"Glow Worm","Base Value":"85 Gold","🌟 Value":"127 Gold"}];
-export { tableHeaders, tableData };
+var rowClasses = ["Rarity", "Appears", "Environment", "Bait"];
+export {tableHeaders, tableData, rowClasses};
