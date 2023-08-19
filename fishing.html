@@ -7,13 +7,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" media="screen" href="static/main.css" />
   <link rel="icon" href="static/favicon.ico" type="image/x-icon" />
-  <script type="module" src="static/dynamic-table.js"></script>
+  <script type="module" src="static/load-fishing-data.js"></script>
+  <script type="text/javascript" src="static/fishing.js"></script>
 </head>
   
 <body>
 <h2>Fish Tracker</h2>
 
-<table id="dataTable">
+<div id="filterBtnContainer">
+  <div class="btnGroup showAll">
+    <button class="btn" onclick="filterNone()">Clear Filter</button>
+  </div>
+  <div class="btnGroup filterRarity">
+    <span>Rarity: </span>
+    <button class="btn active" onclick="filterSelection('Common')">Common</button>
+    <button class="btn active" onclick="filterSelection('Uncommon')">Uncommon</button>
+    <button class="btn active" onclick="filterSelection('Rare')">Rare</button>
+    <button class="btn active" onclick="filterSelection('Epic')">Epic</button>
+  </div>
+  <div class="btnGroup filterAppears">
+    <span>Appears: </span>
+    <button class="btn active" onclick="filterSelection('All Day')">All Day</button>
+    <button class="btn" onclick="filterSelection('Morning')">Morning</button>
+    <button class="btn" onclick="filterSelection('Day')">Day</button>
+    <button class="btn" onclick="filterSelection('Evening')">Evening</button>
+    <button class="btn" onclick="filterSelection('Night')">Night</button>
+  </div>
+  <div class="btnGroup filterEnv">
+    <span>Environment: </span>
+    <button class="btn active" onclick="filterSelection('Caves')">Caves</button>
+    <button class="btn active" onclick="filterSelection('Ponds')">Ponds</button>
+    <button class="btn active" onclick="filterSelection('Kilima Rivers')">Kilima Rivers</button>
+    <button class="btn active" onclick="filterSelection('Kilima Lake')">Kilima Lake</button>
+    <button class="btn active" onclick="filterSelection('Fisherman\'s Lagoon')">Fisherman's Lagoon</button>
+    <button class="btn active" onclick="filterSelection('Bahari Rivers')">Bahari Rivers</button>
+    <button class="btn active" onclick="filterSelection('Bahari Coast')">Bahari Coast</button>
+  </div>
+  <div class="btnGroup filterBait">
+    <span>Bait: </span>
+    <button class="btn active" onclick="filterSelection('None')">None</button>
+    <button class="btn active" onclick="filterSelection('Worm')">Worm</button>
+    <button class="btn active" onclick="filterSelection('Glow Worm')">Glow Worm</button>
+  </div>
+</div>
+<br>
+
+<table id="filterDataTable">
   <thead>
     <tr id="table-header">
       <!-- Table header will be populated here -->
