@@ -1,7 +1,14 @@
 body{
   color:#ddd;
-  background-color: #261a29;
+  background-color: #1c131f;
 }
+
+/* Main Page Buttons */
+.btn-page-link {
+
+}
+/* End Main Page Buttons */
+/* ---------------- */
 
 
 /* Filter Buttons */
@@ -29,3 +36,5 @@ body{
 #Clear{
   background-color: #3f8499
 }
+/* End Filter Buttons */
+/* ---------------- */
