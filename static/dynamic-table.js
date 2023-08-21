@@ -35,26 +35,33 @@ function populateDataTableWithClasses(tableHeaders, tableData, rowClasses) {
 
     var table = document.getElementById("filterDataTable").getElementsByTagName("tbody")[0];
     for (var i = 0; i < tableData.length; i++) {
-        var row = table.insertRow(i);
+        var row = table.insertRow(i); // Create a row in the table for this item of data
 
+        // Add the data to this cell.
         for (var j = 0; j < tableHeaders.length; j++) {
             var cell = row.insertCell(j);
             var header = tableHeaders[j];
-
+            var data = tableData[i][header]
+            
             if (tableData[i].hasOwnProperty(header)) {
-                cell.textContent = tableData[i][header];
+                cell.textContent = data;
             } else {
                 cell.textContent = "N/A";
             }
-            
             if (rowClasses.includes(header)){
-                var noWhitespaceData = tableData[i][header].replaceAll(" ", "_")
-                row.classList.add(noWhitespaceData);
+                if (typeof(data) !== "string"){
+                    data.forEach(e => {
+                        e.replaceAll(" ", "_");
+                        row.classList.add(e);
+                    })
+                }
+                else{
+                    var noWhitespaceData = data.replaceAll(" ", "_");
+                    row.classList.add(noWhitespaceData);
+                }
             }
-            
         }
     }
 }
-
 
 export {populateDataTable, populateDataTableWithClasses};
